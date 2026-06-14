@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCE — Learn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="learn.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-logo"><img src="headlogo.png" alt="OCE"></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="codeedit.html" target="_blank">Editor</a></li>
+    <li><a href="copynotes.html" target="_blank">Notes</a></li>
+    <li><a href="learn.html" class="active">Learn</a></li>
+  </ul>
+</nav>
+
+<main class="learn-main">
+
+  <div class="page-header">
+    <p class="section-label">Tutorials</p>
+    <h1 class="page-title">Learn Web Development</h1>
+    <p class="page-sub">Click any exercise to load it directly in the code editor.</p>
+  </div>
+
+  <!-- HTML SECTION -->
+  <section class="learn-section">
+    <div class="lang-badge html-badge">HTML</div>
+    <h2>HyperText Markup Language</h2>
+    <p class="lang-desc">
+      HTML is the standard markup language for Web pages. It describes the structure of a page
+      using a series of elements. HTML elements tell the browser how to display the content.
+    </p>
+
+    <div class="what-is">
+      <h3>What is HTML?</h3>
+      <ul>
+        <li>HTML stands for <strong>Hyper Text Markup Language</strong></li>
+        <li>It is the standard markup language for creating Web pages</li>
+        <li>HTML describes the structure of a Web page</li>
+        <li>HTML elements label pieces of content such as headings, paragraphs, links, etc.</li>
+        <li>A browser reads HTML and displays it correctly on screen</li>
+      </ul>
+    </div>
+
+    <h3 class="ex-heading">Exercises</h3>
+    <div class="exercises-grid">
+      <a class="ex-card" href="codeedit.html?ex=html1" target="_blank">
+        <div class="ex-num">01</div>
+        <div class="ex-info">
+          <h4>Basic HTML Document</h4>
+          <p>DOCTYPE, html, head, body structure</p>
+        </div>
+        <span class="ex-arrow">→</span>
+      </a>
+      <a class="ex-card" href="codeedit.html?ex=html2" target="_blank">
+        <div class="ex-num">02</div>
+        <div class="ex-info">
+          <h4>Headings &amp; Paragraphs</h4>
+          <p>h1–h6 tags and paragraph elements</p>
+        </div>
+        <span class="ex-arrow">→</span>
+      </a>
+      <a class="ex-card" href="codeedit.html?ex=html3" target="_blank">
+        <div class="ex-num">03</div>
+        <div class="ex-info">
+          <h4>Links &amp; Images</h4>
+          <p>Anchor tags and img elements</p>
+        </div>
+        <span class="ex-arrow">→</span>
+      </a>
+      <a class="ex-card" href="codeedit.html?ex=html4" target="_blank">
+        <div class="ex-num">04</div>
+        <div class="ex-info">
+          <h4>Lists &amp; Tables</h4>
+          <p>ul, ol, li and table elements</p>
+        </div>
+        <span class="ex-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- CSS SECTION -->
+  <section class="learn-section">
+    <div class="lang-badge css-badge">CSS</div>
+    <h2>Cascading Style Sheets</h2>
+    <p class="lang-desc">
+      CSS is the language used to style an HTML document. CSS describes how HTML elements
+      should be displayed — colors, fonts, spacing, layout and animations.
+    </p>
+
+    <div class="what-is">
+      <h3>What is CSS?</h3>
+      <ul>
+        <li>CSS stands for <strong>Cascading Style Sheets</strong></li>
+        <li>CSS describes how HTML elements are displayed on screen</li>
+        <li>CSS saves a lot of work — it can control multiple pages at once</li>
+        <li>External stylesheets are stored in <code>.css</code> files</li>
+      </ul>
+    </div>
+
+    <h3 class="ex-heading">Exercises</h3>
+    <div class="exercises-grid">
+      <a class="ex-card" href="codeedit.html?ex=css1" target="_blank">
+        <div class="ex-num">01</div>
+        <div class="ex-info">
+          <h4>Selectors &amp; Properties</h4>
+          <p>Basic CSS syntax and how to target elements</p>
+        </div>
+        <span class="ex-arrow">→</span>
+      </a>
+      <a class="ex-card" href="codeedit.html?ex=css2" target="_blank">
+        <div class="ex-num">02</div>
+        <div class="ex-info">
+          <h4>Colors &amp; Typography</h4>
+          <p>Background colors, text colors, font styles</p>
+        </div>
+        <span class="ex-arrow">→</span>
+      </a>
+      <a class="ex-card" href="codeedit.html?ex=css3" target="_blank">
+        <div class="ex-num">03</div>
+        <div class="ex-info">
+          <h4>Box Model &amp; Layout</h4>
+          <p>Margin, padding, border and width</p>
+        </div>
+        <span class="ex-arrow">→</span>
+      </a>
+      <a class="ex-card" href="codeedit.html?ex=css4" target="_blank">
+        <div class="ex-num">04</div>
+        <div class="ex-info">
+          <h4>Flexbox Basics</h4>
+          <p>Display flex, justify-content, align-items</p>
+        </div>
+        <span class="ex-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- WEB BROWSERS -->
+  <section class="learn-section">
+    <div class="lang-badge js-badge">Browser</div>
+    <h2>Web Browsers</h2>
+    <p class="lang-desc">
+      The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read HTML documents
+      and display them correctly. A browser does not display the HTML tags, but uses them to
+      determine how to display the document.
+    </p>
+    <div class="browser-img">
+      <img src="web_browser.png" alt="Web Browser Developer Tools">
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-logo"><img src="headlogo.png" alt="OCE"></div>
+  <p>Built by MPC College Students &middot; 2024</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCE — Code Editor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="codeedit.css">
+</head>
+<body>
+
+<div class="editor-shell">
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="topbar-left">
+      <div class="dots">
+        <span class="dot dot-r"></span>
+        <span class="dot dot-y"></span>
+        <span class="dot dot-g"></span>
+      </div>
+      <span class="editor-title">&lt;/&gt; OCE — Live Editor</span>
+    </div>
+    <div class="topbar-tabs">
+      <button class="tab active" onclick="switchTab('html', this)">HTML</button>
+      <button class="tab" onclick="switchTab('css', this)">CSS</button>
+      <button class="tab" onclick="switchTab('js', this)">JS</button>
+    </div>
+    <div class="topbar-right">
+      <button class="run-btn" onclick="runCode()">▶ RUN</button>
+      <button class="clear-btn" onclick="clearCode()">✕ Clear</button>
+      <a href="index.html" class="home-btn">⌂ Home</a>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="editor-body">
+
+    <!-- PANES -->
+    <div class="panes-wrap">
+      <div class="pane active" id="pane-html">
+        <div class="pane-label">HTML</div>
+        <textarea id="htmlCode" spellcheck="false" placeholder="<!-- Write HTML here -->"></textarea>
+      </div>
+      <div class="pane" id="pane-css">
+        <div class="pane-label">CSS</div>
+        <textarea id="cssCode" spellcheck="false" placeholder="/* Write CSS here */"></textarea>
+      </div>
+      <div class="pane" id="pane-js">
+        <div class="pane-label">JavaScript</div>
+        <textarea id="jsCode" spellcheck="false" placeholder="// Write JavaScript here"></textarea>
+      </div>
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="preview-wrap">
+      <div class="pane-label">Preview</div>
+      <iframe id="preview-window"></iframe>
+    </div>
+
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="codeedit.js"></script>
+</body>
+</html>

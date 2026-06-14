@@ -1,0 +1,133 @@
+:root {
+  --bg: #0a0a0f;
+  --surface: #12121a;
+  --surface2: #1a1a26;
+  --accent: #39ff8f;
+  --text: #e8e8f0;
+  --muted: #6b6b8a;
+  --border: #2a2a3d;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  font-family: 'Space Grotesk', sans-serif;
+  height: 100vh; display: flex; flex-direction: column;
+  overflow: hidden;
+}
+
+.editor-shell {
+  display: flex; flex-direction: column;
+  height: 100vh; background: var(--bg);
+}
+
+/* ── TOPBAR ── */
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.65rem 1.2rem;
+  background: #0a0a10; border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.topbar-left { display: flex; align-items: center; gap: 0.8rem; }
+.dots { display: flex; gap: 0.4rem; }
+.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.dot-r { background: #ff5f57; }
+.dot-y { background: #febc2e; }
+.dot-g { background: #28c840; }
+.editor-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem; color: var(--muted);
+}
+
+.topbar-tabs { display: flex; gap: 0.25rem; }
+.tab {
+  padding: 0.35rem 1.1rem; border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.78rem;
+  cursor: pointer; border: 1px solid transparent;
+  color: var(--muted); background: transparent; transition: all 0.2s;
+}
+.tab.active { background: var(--surface2); color: var(--accent); border-color: var(--border); }
+.tab:hover:not(.active) { color: var(--text); }
+
+.topbar-right { display: flex; align-items: center; gap: 0.5rem; }
+.run-btn {
+  padding: 0.35rem 1.2rem; border-radius: 20px;
+  background: var(--accent); color: #0a0a0f;
+  font-weight: 700; font-size: 0.8rem; border: none; cursor: pointer;
+  font-family: 'JetBrains Mono', monospace; transition: all 0.2s;
+}
+.run-btn:hover { box-shadow: 0 0 20px rgba(57,255,143,0.4); }
+.clear-btn {
+  padding: 0.35rem 1rem; border-radius: 20px;
+  background: transparent; color: var(--muted);
+  font-size: 0.8rem; border: 1px solid var(--border); cursor: pointer;
+  font-family: 'JetBrains Mono', monospace; transition: all 0.2s;
+}
+.clear-btn:hover { color: #ff5f57; border-color: #ff5f57; }
+.home-btn {
+  padding: 0.35rem 1rem; border-radius: 20px;
+  background: transparent; color: var(--muted);
+  font-size: 0.8rem; border: 1px solid var(--border);
+  text-decoration: none; font-family: 'JetBrains Mono', monospace; transition: all 0.2s;
+}
+.home-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ── EDITOR BODY ── */
+.editor-body {
+  display: flex; flex: 1; overflow: hidden;
+}
+
+.panes-wrap {
+  width: 50%; display: flex; flex-direction: column;
+  border-right: 1px solid var(--border);
+}
+
+.pane {
+  flex: 1; display: none; flex-direction: column;
+}
+.pane.active { display: flex; }
+
+.pane-label {
+  padding: 0.3rem 0.8rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem; color: var(--muted);
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  text-transform: uppercase; letter-spacing: 0.1em; flex-shrink: 0;
+}
+
+.pane textarea {
+  flex: 1; background: #0d0d14; color: #a8ff78;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.88rem;
+  padding: 1rem; border: none; outline: none; resize: none;
+  line-height: 1.7; tab-size: 2;
+}
+.pane textarea::placeholder { color: #2a2a40; }
+
+/* ── PREVIEW ── */
+.preview-wrap {
+  width: 50%; display: flex; flex-direction: column;
+  background: white;
+}
+.preview-wrap .pane-label { background: var(--surface); }
+.preview-wrap iframe {
+  flex: 1; border: none; background: white;
+}
+
+/* ── TOAST ── */
+.toast {
+  position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 999;
+  background: var(--accent); color: #0a0a0f;
+  padding: 0.6rem 1.2rem; border-radius: 30px;
+  font-weight: 700; font-size: 0.82rem;
+  transform: translateY(80px); opacity: 0;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+@media (max-width: 768px) {
+  .editor-body { flex-direction: column; }
+  .panes-wrap, .preview-wrap { width: 100%; height: 50%; }
+  .editor-title { display: none; }
+}
