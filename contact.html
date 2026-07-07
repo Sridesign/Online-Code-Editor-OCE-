@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCE — Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-logo"><img src="headlogo.png" alt="OCE"></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="codeedit.html" target="_blank">Editor</a></li>
+    <li><a href="learn.html" target="_blank">Learn</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="contact-main">
+
+  <div class="page-header">
+    <p class="section-label">Reach out</p>
+    <h1 class="page-title">Contact Us</h1>
+    <p class="page-sub">Have feedback, a question, or just want to say hi? We'd love to hear from you.</p>
+  </div>
+
+  <div class="contact-grid">
+
+    <!-- LEFT: INFO -->
+    <div class="contact-info-panel">
+
+      <div class="info-card">
+        <div class="info-icon">📧</div>
+        <div>
+          <h3>Email</h3>
+          <a href="mailto:sriramnarayanan123@gmail.com">sriramnarayanan123@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">📞</div>
+        <div>
+          <h3>Phone</h3>
+          <a href="tel:+918072328123">+91 80723 28123</a>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">🏫</div>
+        <div>
+          <h3>Institution</h3>
+          <p>MPC College, Chennai</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">🕐</div>
+        <div>
+          <h3>Response Time</h3>
+          <p>Usually within 24 hours</p>
+        </div>
+      </div>
+
+      <div class="faq-block">
+        <h3>Quick Answers</h3>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Is OCE free to use? <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">Yes, completely free — no sign-up needed to use the editor.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Can I use it on mobile? <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">Yes! OCE works on all modern browsers including mobile Chrome and Safari.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Do I need to install anything? <span class="faq-arrow">▾</span>
+          </button>
+          <div class="faq-a">No installation needed. Just open the browser and start coding.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="contact-form-panel">
+      <form id="contact-form" novalidate>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="c-name">Your Name</label>
+            <input type="text" id="c-name" placeholder="e.g. Sriram">
+            <span class="field-error" id="err-cname"></span>
+          </div>
+          <div class="field-group">
+            <label for="c-phone">Phone Number</label>
+            <input type="tel" id="c-phone" placeholder="+91 98765 43210">
+            <span class="field-error" id="err-cphone"></span>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="c-email">Email Address</label>
+          <input type="email" id="c-email" placeholder="you@example.com">
+          <span class="field-error" id="err-cemail"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="c-subject">Subject</label>
+          <select id="c-subject">
+            <option value="">— Select a topic —</option>
+            <option value="feedback">Feedback</option>
+            <option value="bug">Bug Report</option>
+            <option value="feature">Feature Request</option>
+            <option value="question">General Question</option>
+            <option value="other">Other</option>
+          </select>
+          <span class="field-error" id="err-csubject"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="c-msg">Message</label>
+          <textarea id="c-msg" rows="5" placeholder="Tell us what's on your mind..."></textarea>
+          <div class="char-count"><span id="char-count">0</span> / 500</div>
+          <span class="field-error" id="err-cmsg"></span>
+        </div>
+
+        <button type="submit" class="submit-btn" id="contact-submit">Send Message</button>
+
+      </form>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-logo"><img src="headlogo.png" alt="OCE"></div>
+  <p>Built by MPC College Students &middot; 2024</p>
+</footer>
+
+<!-- Success overlay -->
+<div class="success-overlay" id="success-overlay">
+  <div class="success-card">
+    <div class="success-icon">✉️</div>
+    <h2>Message Sent!</h2>
+    <p>Thanks for reaching out. We'll get back to you within 24 hours.</p>
+    <button class="submit-btn" onclick="closeOverlay()" style="margin-top:0.5rem;">
+      Back to Page
+    </button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="contact.js"></script>
+</body>
+</html>

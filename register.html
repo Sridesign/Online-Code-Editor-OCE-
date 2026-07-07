@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCE — Register</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-logo"><img src="headlogo.png" alt="OCE"></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="codeedit.html" target="_blank">Editor</a></li>
+    <li><a href="learn.html" target="_blank">Learn</a></li>
+    <li><a href="register.html" class="active">Register</a></li>
+  </ul>
+</nav>
+
+<main class="auth-main">
+
+  <div class="auth-left">
+    <div class="brand-block">
+      <div class="brand-eyebrow">&lt;/&gt; Online Code Editor</div>
+      <h2 class="brand-title">Start coding<br>in seconds.</h2>
+      <p class="brand-sub">Join OCE and get instant access to the live editor, copy notes, and all tutorials — completely free.</p>
+      <ul class="brand-perks">
+        <li><span class="perk-icon">⚡</span> Live HTML/CSS/JS preview</li>
+        <li><span class="perk-icon">📋</span> Ready-to-copy code snippets</li>
+        <li><span class="perk-icon">🎓</span> Beginner-friendly tutorials</li>
+        <li><span class="perk-icon">📱</span> Works on any device</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="auth-right">
+    <div class="auth-card">
+      <h1 class="form-title">Create Account</h1>
+      <p class="form-sub">Free — takes less than a minute</p>
+
+      <form id="register-form" novalidate>
+
+        <div class="field-group">
+          <label for="r-name">Username</label>
+          <input type="text" id="r-name" placeholder="e.g. sriram123" autocomplete="username">
+          <span class="field-error" id="err-name"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="r-email">Email Address</label>
+          <input type="email" id="r-email" placeholder="you@example.com" autocomplete="email">
+          <span class="field-error" id="err-email"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="r-pass">Password</label>
+          <div class="input-wrap">
+            <input type="password" id="r-pass" placeholder="Minimum 6 characters" autocomplete="new-password">
+            <button type="button" class="toggle-pass" onclick="togglePassword('r-pass', this)">👁</button>
+          </div>
+          <div class="strength-bar"><div class="strength-fill" id="strength-fill"></div></div>
+          <span class="strength-label" id="strength-label"></span>
+          <span class="field-error" id="err-pass"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="r-cpass">Confirm Password</label>
+          <div class="input-wrap">
+            <input type="password" id="r-cpass" placeholder="Repeat your password" autocomplete="new-password">
+            <button type="button" class="toggle-pass" onclick="togglePassword('r-cpass', this)">👁</button>
+          </div>
+          <span class="field-error" id="err-cpass"></span>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submit-btn">Create Account</button>
+
+        <p class="terms-note">
+          By registering, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
+        </p>
+
+      </form>
+
+      <p class="switch-auth">Already have an account? <a href="login.html">Log in here</a></p>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- Success overlay -->
+<div class="success-overlay" id="success-overlay">
+  <div class="success-card">
+    <div class="success-icon">🎉</div>
+    <h2>Account Created!</h2>
+    <p>Welcome to OCE. You're all set to start coding.</p>
+    <a href="codeedit.html" class="submit-btn" style="display:inline-block;text-decoration:none;margin-top:0.5rem;">
+      Open Editor →
+    </a>
+    <a href="index.html" class="link-btn">Go to Home</a>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="register.js"></script>
+</body>
+</html>

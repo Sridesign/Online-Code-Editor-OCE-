@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OCE — Copy Notes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="copynotes.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-logo"><img src="headlogo.png" alt="OCE"></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="codeedit.html" target="_blank">Editor</a></li>
+    <li><a href="copynotes.html" class="active">Notes</a></li>
+    <li><a href="learn.html" target="_blank">Learn</a></li>
+  </ul>
+</nav>
+
+<main class="notes-main">
+
+  <div class="page-header">
+    <p class="section-label">Code Snippets</p>
+    <h1 class="page-title">Copy Notes</h1>
+    <p class="page-sub">Click <strong>Copy</strong> on any snippet, then paste it into the editor to run it.</p>
+  </div>
+
+  <!-- ── HTML NOTES ── -->
+  <div class="lang-divider">
+    <span class="lang-badge html-badge">HTML</span>
+    <span class="lang-line"></span>
+  </div>
+
+  <div class="snippet-grid">
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 1</h3>
+          <p>Basic HTML Document</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;My First Heading&lt;/h1&gt;
+  &lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 2</h3>
+          <p>HTML Headings</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+    </div>
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 3</h3>
+          <p>Paragraphs with Inline Styles</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;p&gt;I am normal&lt;/p&gt;
+&lt;p style="color:red;"&gt;I am red&lt;/p&gt;
+&lt;p style="color:blue;"&gt;I am blue&lt;/p&gt;
+&lt;p style="font-size:50px;"&gt;I am big&lt;/p&gt;</code></pre>
+    </div>
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 4</h3>
+          <p>Links &amp; Images</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;a href="https://google.com" target="_blank"&gt;
+  Visit Google
+&lt;/a&gt;
+
+&lt;img src="https://via.placeholder.com/200"
+     alt="Placeholder Image"&gt;</code></pre>
+    </div>
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 5</h3>
+          <p>Unordered &amp; Ordered Lists</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Step One&lt;/li&gt;
+  &lt;li&gt;Step Two&lt;/li&gt;
+  &lt;li&gt;Step Three&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+    </div>
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 6</h3>
+          <p>HTML Table</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Alice&lt;/td&gt;
+    &lt;td&gt;20&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Bob&lt;/td&gt;
+    &lt;td&gt;22&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+    </div>
+
+  </div><!-- /snippet-grid -->
+
+  <!-- ── CSS NOTES ── -->
+  <div class="lang-divider">
+    <span class="lang-badge css-badge">CSS</span>
+    <span class="lang-line"></span>
+  </div>
+
+  <div class="snippet-grid">
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 1</h3>
+          <p>CSS Syntax &amp; Selectors</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;style&gt;
+  p {
+    color: red;
+    text-align: center;
+    font-size: 20px;
+  }
+&lt;/style&gt;
+
+&lt;p&gt;Hello World!&lt;/p&gt;
+&lt;p&gt;Styled with CSS.&lt;/p&gt;</code></pre>
+    </div>
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 2</h3>
+          <p>CSS Background Colors</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;h1 style="background-color:DodgerBlue;"&gt;
+  Hello World
+&lt;/h1&gt;
+
+&lt;p style="background-color:Tomato;"&gt;
+  A paragraph with a red background.
+&lt;/p&gt;
+
+&lt;p style="background-color:LightGreen;"&gt;
+  A paragraph with a green background.
+&lt;/p&gt;</code></pre>
+    </div>
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 3</h3>
+          <p>Box Model</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;style&gt;
+  .box {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid tomato;
+    margin: 30px auto;
+    background: lightyellow;
+    text-align: center;
+  }
+&lt;/style&gt;
+
+&lt;div class="box"&gt;I am a box!&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 4</h3>
+          <p>Flexbox Layout</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;style&gt;
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 200px;
+    background: #f0f0f0;
+  }
+  .item {
+    width: 60px; height: 60px;
+    background: dodgerblue; color: white;
+    display: flex; align-items: center;
+    justify-content: center;
+    border-radius: 8px; font-size: 1.5rem;
+  }
+&lt;/style&gt;
+
+&lt;div class="flex-container"&gt;
+  &lt;div class="item"&gt;A&lt;/div&gt;
+  &lt;div class="item"&gt;B&lt;/div&gt;
+  &lt;div class="item"&gt;C&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 5</h3>
+          <p>CSS Hover &amp; Transitions</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;style&gt;
+  .btn {
+    padding: 12px 28px;
+    background: #39ff8f;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .btn:hover {
+    background: #00c4ff;
+    transform: translateY(-3px);
+  }
+&lt;/style&gt;
+
+&lt;button class="btn"&gt;Hover Me!&lt;/button&gt;</code></pre>
+    </div>
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 6</h3>
+          <p>CSS Grid Layout</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;style&gt;
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+  .cell {
+    background: #6c63ff;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.2rem;
+  }
+&lt;/style&gt;
+
+&lt;div class="grid"&gt;
+  &lt;div class="cell"&gt;1&lt;/div&gt;
+  &lt;div class="cell"&gt;2&lt;/div&gt;
+  &lt;div class="cell"&gt;3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+  </div><!-- /snippet-grid -->
+
+  <!-- ── JS NOTES ── -->
+  <div class="lang-divider">
+    <span class="lang-badge js-badge">JavaScript</span>
+    <span class="lang-line"></span>
+  </div>
+
+  <div class="snippet-grid">
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 1</h3>
+          <p>Alert &amp; Console</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;button onclick="greet()"&gt;Say Hello&lt;/button&gt;
+
+&lt;script&gt;
+  function greet() {
+    alert("Hello from JavaScript!");
+    console.log("Button clicked");
+  }
+&lt;/script&gt;</code></pre>
+    </div>
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 2</h3>
+          <p>Change Text with JS</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;h1 id="title"&gt;Original Text&lt;/h1&gt;
+&lt;button onclick="changeText()"&gt;Change It&lt;/button&gt;
+
+&lt;script&gt;
+  function changeText() {
+    document.getElementById("title").innerText
+      = "Text Changed! 🎉";
+  }
+&lt;/script&gt;</code></pre>
+    </div>
+
+    <div class="snippet-card">
+      <div class="snippet-header">
+        <div>
+          <h3>Exercise 3</h3>
+          <p>Simple Counter</p>
+        </div>
+        <button class="copy-btn" onclick="copySnippet(this)">Copy</button>
+      </div>
+      <pre class="code-block"><code>&lt;h2 id="count"
+    style="text-align:center;font-size:3rem;"&gt;
+  0
+&lt;/h2&gt;
+&lt;div style="text-align:center"&gt;
+  &lt;button onclick="change(-1)"&gt;−&lt;/button&gt;
+  &lt;button onclick="change(1)"&gt;+&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  let n = 0;
+  function change(v) {
+    n += v;
+    document.getElementById("count").innerText = n;
+  }
+&lt;/script&gt;</code></pre>
+    </div>
+
+  </div><!-- /snippet-grid -->
+
+</main>
+
+<footer class="footer">
+  <div class="footer-logo"><img src="headlogo.png" alt="OCE"></div>
+  <p>Built by MPC College Students &middot; 2024</p>
+</footer>
+
+<div class="toast" id="toast">✓ Copied to clipboard!</div>
+
+<script src="copynotes.js"></script>
+</body>
+</html>
